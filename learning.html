@@ -1,0 +1,338 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<title>Fantasy Coders Academy - Learning</title>
+		<!--
+			Fantasy Coders Academy Main Webpage
+			Filename: learning.html
+			Author: chydarren
+			Date: 27 January 2017
+		--> 
+	    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="styles.css"> 
+		<link rel="shortcut icon" href="images/favicon.ico"> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.min.css">            <!-- jQuery user interface library --> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.theme.min.css">      <!-- jQuery user interface library --> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.structure.min.css">  <!-- jQuery user interface library --> 
+		<script src="scripts/modernizr.custom.40753.js"></script>                 <!-- modernizr feature detection library --> 
+		<script src="scripts/jquery-3.1.1.min.js"></script>                       <!-- jQuery library --> 
+		<script src="scripts/jquery-ui.min.js"></script>				          <!-- jQuery user interface library --> 
+		<script>
+		/* jquery - tooltip */ 
+		/* referenced from: http://jqueryui.com/tooltip/ */
+		$( function() {
+			$( document ).tooltip();
+		} );
+		</script>
+		<script>
+		/* jquery - autocomplete */ 
+		/* referenced from: http://jqueryui.com/autocomplete/ */ 
+		$( function() {
+			var availableTags = [
+			"All About Python",
+			"All About Java",
+			"All About HTML5 and CSS3",
+			"All About Microsoft SQL",
+			"Next Level Python",
+			"Android Applications Development",
+			"Web Applications Development",
+			"Database Security",
+			"Advanced Python",
+			"Advanced Java",
+			"Advanced Web Development",
+			"Advanced Database Systems"
+			];
+			$( "#search" ).autocomplete({
+			  source: availableTags
+			});
+		} );
+		</script>
+	</head>
+	<body>
+		<!-- main container --> 
+		<div class="mainContainer">
+		
+			<!-- headings -->
+			<header>
+				<figure><a href="index.html"><img src="images/logo.png" alt="fantasyCodersAcademy" title="Fantasy Coders Academy"></a></figure>
+			</header>
+			
+			<!-- navigation -->
+			<nav>
+				<div class="navigation-menu-button" onclick="myFunction(this)">
+					<div id="bar1"></div>
+					<div id="bar2"></div>
+					<div id="bar3"></div>
+				</div>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li class="subNavigation"><a class="active" href="learning.html">LEARNING <span>&#x25BC;</span></a>
+						<ul class="subNavigationDropdown">
+							<li><a href="facilities.html">FACILITIES</a></li>
+						</ul>
+					</li>
+					<li class="subNavigation"><a href="contact.html">CONTACT <span>&#x25BC;</span></a>
+						<ul class="subNavigationDropdown" id="lastDropDown">
+							<li><a href="reservations.html">RESERVATIONS</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			
+			<!-- content (learning) --> 
+			<main>
+				<h1>LEARNING</h1>
+				<h2>WHAT WE OFFER</h2>
+				<article id="pricing">
+					<h3>Course Fees</h3>
+					<section>
+						<h3>Beginner</h3>
+						<ul>
+							<li>S&#36;120.00</li>
+							<li>8 days course</li>
+							<li>2 hours per day</li>
+							<li>Laptop not provided</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Intermediate</h3>
+						<ul>
+							<li>S&#36;240.00</li>
+							<li>12 days course</li>
+							<li>3 hours per day</li>
+							<li>Laptop not provided</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Advanced</h3>
+						<ul>
+							<li>S&#36;360.00</li>
+							<li>18 days course</li>
+							<li>3 hours per day</li>
+							<li>Laptop not provided</li>
+						</ul>
+					</section>
+				</article>
+				<article id="courses">
+					<h3>Available Courses</h3>
+					<form>
+						<fieldset>
+							<input type="text" id="search" value="" placeholder="Search.." >
+							<p id="searchcount"></p>
+						</fieldset>
+					</form>
+					<div class="course">
+						<button><span>Beginner</span><span>All About Python</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>P01</p>
+							<h3>Synopsis</h3>
+							<p>Python is an intepreted, interactive type of object&#45;oriented programming language. Through this course, we educate our coders with the fundamentals
+							such as modules, exceptions, dynamic typing and classes. Coders who go through this course will be able to program different applications onto different
+							operating systems such as Unix, Macintosh, Linux, Mac and Windows 2000 or later. You will find this very course very engaging and interesting 
+							to learn and will not feel that its very labor intensive as we try to structure the curriculum at your pace.</p>
+						</div>
+					</div>
+					<div class="course">
+						<button><span>Beginner</span><span>All About Java</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>J01</p>
+							<h3>Synopsis</h3>
+							<p>Java is by far the simplest and well known high&#45;level programming language around the world. You can create many applications with good graphical
+							user interface and examples of applications include quizzes, calculators, selection panels and many more. It is easy to learn with not much complexity 
+							involved and our course cover basically the fundamentals such as loops, methods, classes and arrays. You will find this course simple and easy to remember
+							and will be able to use it for many applications in real life.</p>
+						</div>
+					</div>
+					<div class="course">
+						<button><span>Beginner</span><span>All About HTML5 and CSS3</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>W01</p>
+							<h3>Synopsis</h3>
+							<p>HTML5 and CSS3 are the latest standards for web development on any type of browser. Coders in this course will be taught how to design forms, tables and their
+							web layout. You will find this course very interesting and will be able to style a fully responsive website that is compatible with both mobiles and desktops. With 
+							web development skills picked up, you will be able to even take up freelance job of helping others to design their website creatively and show them what you can be
+							great at. it is easy and fun to learn.</p>
+						</div>
+					</div>
+					<div class="course">
+						<button><span>Beginner</span><span>All About Microsoft SQL</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>D01</p>
+							<h3>Synopsis</h3>
+							<p>Microsoft SQL Server is a relational database management system developed by Microsoft. In this course, coders will learn good organization and critical 
+							thinking skills in managing one million customers data. How do you ensure that the customers data are organized in a way that its easy to query and collate	&#63;
+							In this course, we will teach you the commands that you will need to manage simple databases and entity relationship diagram to illustrate the logical structure
+							of databases.</p> 
+						</div>
+					</div>
+					<div class="course">
+						<button><span>Intermediate</span><span>Next Level Python</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>P02</p>
+							<h3>Synopsis</h3>
+							<p>Coders should have a basic foundation in Python programming before taking this course. Through this intermediate Python course, coders will be placed on 
+							emphasis with a lot of problem solving questions and situations which may require them to think critcally and design applications or take an approach that can help 
+							creatively solve a particular problem. Topics such as modules and classes learnt previously will be used frequently for creating more complex codes and aligning
+							codes in a proper way with good readability. Patience and resilience are required.</p>
+						</div>
+					</div>
+					<div class="course">
+						<button><span>Intermediate</span><span>Android Applications Development</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>J02</p>
+							<h3>Synopsis</h3>
+							<p>Coders should have a basic foundation in Java programming before taking this course. Android Applications are very popular nowadays as many people now own a smartphone each. 
+							While the application stores on both iOS and Android remain competitive, the world still needs more application developers to make a contribution to provide greater and feasible applications 
+							for the public to use. Through this course, action bar, fragments, alert dialogs and drawables and how to publish applications on the store will be covered 
+							intensively. You will be able to develop and pick up good skills that will be essential for making applications in future.</p>
+						</div>
+					</div>
+					<div class="course">
+						<button><span>Intermediate</span><span>Web Applications Development</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>W02</p>
+							<h3>Synopsis</h3>
+							<p>Coders should have a basic foundation in HTML and CSS3 before taking this course. Through this Web Applications Development course, coders will be equipped
+							with knowledge of integrated development environment that supports .NET web applications development. You will be able to create dynamic web applications with advanced
+							web elements such as Javascript and ASP.NET technologies. Be expected to be resilient and critical in thinking as it involves a lot of problem solving and prior
+							and solid experience in website development in order to build applications useful for the web.</p>
+						</div>
+					</div>
+					<div class="course">
+						<button><span>Intermediate</span><span>Database Security</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>D02</p>
+							<h3>Synopsis</h3>
+							<p>Coders should have a basic foundation in Microsoft SQL before taking this course. As nowadays many databases may be subjected to attack such as SQL injection and many more, 
+							there is a strong need to protect the databases in the company. In this course, coders will be taught on transactional SQL as well as access control, auditing, authentication and 
+							encryption. There are a mix of coding and graphical user interface interactions in order to achieve database security. Once the skills are picked up, one will be able to backup the data
+							and recover the database of Microsoft SQL.</p>
+						</div>
+					</div>
+					<div class="course">
+						<button><span>Advanced</span><span>Advanced Python</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>P03</p>
+							<h3>Synopsis</h3>
+							<p>Coders should have a foundation in basic and intermediate Python programming, as well as Linux management. In this course, coders will be given real&#45;life scenarios to 
+							further build on their problem solving skills and critical thinking developed from the intermediate Python course. Advanced topics such as interaction between Python and Linux, Forks and Forking
+							which include finding active IP addresses will be taught. Coders will find the knowledge gained to be very meaningful and useful for future use. However, please note that our academy do not provide 
+							basic Linux management course and hence coders are advised to learn Linux management outside of the academy first for good start.</p>
+						</div>
+					</div>
+					<div class="course">
+						<button><span>Advanced</span><span>Advanced Java</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>J03</p>
+							<h3>Synopsis</h3>
+							<p>Coders should have a foundation in basic Java programming. If you have basic foundation in Android Applications development, it will be even better. In this course, 
+							topics will include threading, generics, Java collections framework and new features present in the J2SE. As the course is highly intensive with a lot of problem solving
+							and troubleshooting of major errors that may possibly occur, coders will require resilient and have very good Java programming skills. This course is not easy to pass and 
+							if potential coders are not confident enough, they are recommmended to take up some other advanced courses.</p>
+						</div>
+					</div>
+					<div class="course">
+						<button><span>Advanced</span><span>Advanced Web Development</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>W03</p>
+							<h3>Synopsis</h3>
+							<p>Coders should have a foundation in HTML5 and CSS3 and Web Applications Development. In this course, coders will be given real situations that will require them to build 
+							really good websites with good applications implemented. A high requirement to pass this course is to build something that not only looks good, but at the same time have built
+						    &#45;in functions that really serves the company well. You will also be taught how to integrate your website with bootstrap functions to further enhance the features of the
+							site. More importantly, you should be resilient to want to work hard in coding a beautiful website.</p>
+						</div>
+					</div>
+					<div class="course">
+						<button><span>Advanced</span><span>Advanced Database Systems</span></button>
+						<div>
+							<h3>Course Code</h3>
+							<p>D03</p>
+							<h3>Synopsis</h3>
+							<p>Coders should have a foundation in Microsoft SQL and database security. The course will focus on object&#45;oriented and object&#45;relational databases. In addition, 
+							XML will be covered which is used to describe data and quickly became a standard for transmitting data between organizations. Structure of XML files, writing queries against
+							such files, and how to integrate XML into relation database management system will be covered. It is a course that is very demanding and difficult to pass, as many may not have
+							fully understood transactional SQL. Nonetheless, you will be put in great hands at Fantasy Coders Academy</p>
+						</div>
+					</div>
+				</article>
+			</main>
+			
+			<!-- content (social media)-->
+			<aside>
+				<a href="https://www.facebook.com/fantasycodersacademy" target="_blank"><figure><img src="images/logofacebook.png" onmouseover="mOF(this)" onmouseout="mAF(this)" alt="facebookLogo" title="Facebook"></figure></a>
+				<a href="https://twitter.com/dism1b22" target="_blank"><figure><img src="images/logotwitter.png" onmouseover="mOT(this)" onmouseout="mAT(this)" alt="twitterLogo" title="Twitter"></figure></a>
+				<a href="https://www.instagram.com/fantasycodersacademy/" target="_blank"><figure><img src="images/logoinstagram.png" onmouseover="mOI(this)" onmouseout="mAI(this)" alt="instagramLogo" title="Instagram"></figure></a>
+				<a href="https://www.youtube.com/channel/UCR1FBbj6zyIL67-wZVbbGGQ" target="_blank"><figure><img src="images/logoyoutube.png" onmouseover="mOY(this)" onmouseout="mAY(this)" alt="youtubeLogo" title="Youtube"></figure></a>
+				<a href="mailto:fantasycodersacademy@gmail.com" target="_blank"><figure><img src="images/logoemail.png" onmouseover="mOE(this)" onmouseout="mAE(this)" alt="emailLogo" title="Email"></figure></a>
+			</aside>
+			
+			<!-- back to top --> 
+			<a href="#" id="top" title="Back To Top">&#8593;</a>
+			
+			<!--footer-->
+			<footer>
+				<section> 
+					<h3>STAY CONNECTED</h3>
+					<p>Subscribe to Fantasy Coders Academy&#x27;s mailing list for exclusive offers&#x2c; monthly coding tips and news on the latest applications&#x21;</p>
+					<form name="subscriptionform" onsubmit="return(subscriptionfieldvalidation());" action="stayconnectedvalidation.html">
+						<fieldset>
+							<input type="email" placeholder="Email Address" name="Email Address" id="emailAddress">
+							<input type="submit" value="Sign Up"> 
+						</fieldset>
+					</form>
+					<script>
+					/* javascript - subscriptionfieldvalidation */ 
+					/* referenced from: HTML5 and CSS3 Complete Textbook */
+					function subscriptionfieldvalidation(){
+						if(document.subscriptionform.emailAddress.value == "") {
+							alert("Please provide your email address.");
+							document.subscriptionform.emailAddress.focus() ;
+							document.subscriptionform.emailAddress.style.backgroundColor = "#ffb3b3";
+							return false;
+						} else {
+							document.subscriptionform.emailAddress.style.backgroundColor = "#b3ff99";
+						}
+					}
+					</script>
+				</section>
+				<section> 
+					<h3>NAVIGATE</h3>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="learning.html">Learning</a></li>
+					</ul>
+					<ul>
+						<li><a href="facilities.html">Facilities</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="reservations.html">Reservations</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3>TALK TO US</h3>
+					<p><span class="pae">P</span>&#40;65&#41; 6888 0658
+					<br><span class="pae">A</span>Mapletree Business City II, &#x23;01&#45;045, Singapore 118502
+					<br><span class="pae">E</span>fantasycodersacademy&#64;gmail.com</p>
+				</section>
+			</footer>
+			
+		<!-- end of main container -->
+		</div>
+		<script src="scripts/scriptglobal.js"></script>					<!-- global script applies to all pages --> 
+		<script src="scripts/scriptaccordionlearning.js"></script>		<!-- accordion for the course display --> 
+		<script src="scripts/scriptsearch.js"></script>                 <!-- search bar --> 
+	</body>
+</html>

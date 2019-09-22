@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<title>Fantasy Coders Academy - Reservations Validation</title>
+		<!--
+			Fantasy Coders Academy Main Webpage
+			Filename: reservationsvalidation.html
+			Author: chydarren
+			Date: 5 February 2017
+		--> 
+	    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="styles.css"> 
+		<link rel="shortcut icon" href="images/favicon.ico"> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.min.css">            <!-- jQuery user interface library --> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.theme.min.css">      <!-- jQuery user interface library --> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.structure.min.css">  <!-- jQuery user interface library --> 
+		<script src="scripts/modernizr.custom.40753.js"></script>                 <!-- modernizr feature detection library --> 
+		<script src="scripts/jquery-3.1.1.min.js"></script>                       <!-- jQuery library --> 
+		<script src="scripts/jquery-ui.min.js"></script>				          <!-- jQuery user interface library --> 
+		<script>
+		/* jquery - tooltip */ 
+		/* referenced from: http://jqueryui.com/tooltip/ */
+		$( function() {
+			$( document ).tooltip();
+		} );
+		</script>
+	</head>
+	<body>
+		<!-- main container --> 
+		<div class="mainContainer">
+		
+			<!-- headings -->
+			<header>
+				<figure><a href="index.html"><img src="images/logo.png" alt="fantasyCodersAcademy" title="Fantasy Coders Academy"></a></figure>
+			</header>
+			
+			<!-- navigation -->
+			<nav>
+				<div class="navigation-menu-button" onclick="myFunction(this)">
+					<div id="bar1"></div>
+					<div id="bar2"></div>
+					<div id="bar3"></div>
+				</div>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li class="subNavigation"><a href="learning.html">LEARNING <span>&#x25BC;</span></a>
+						<ul class="subNavigationDropdown">
+							<li><a href="facilities.html">FACILITIES</a></li>
+						</ul>
+					</li>
+					<li class="subNavigation"><a href="contact.html">CONTACT <span>&#x25BC;</span></a>
+						<ul class="subNavigationDropdown" id="lastDropDown">
+							<li><a class="active" href="reservations.html">RESERVATIONS</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			
+			<!-- content (reservations validation) -->
+			<main>
+				<h1>RESERVATIONS</h1>
+				<h2>ENTRY VALIDATION</h2>
+				<article id="reservationsvalidation">
+					<h3>Validation</h3>
+					<p>Thank you for your reservation. 
+					<br>We are pleased to inform you that your reservation has submitted.
+					<br>We will contact you within 3 days to make other arrangements.
+					<br>The details that you provided for the reservation was the following.</p>
+					<script>
+					/* javascript - displaying results */ 
+					/* referenced from: HTML5 and CSS3 Complete Textbook */ 
+					var formData = location.search;
+					formData = formData.substring(1, formData.length);
+					while (formData.indexOf("+") !== -1) {
+						formData = formData.replace("+", " ");
+				    }
+					formData = decodeURIComponent(formData);
+					var formArray = formData.split("&");
+					for (var i = 0; i < formArray.length; i = i + 1) {
+					    document.write("<p>" + formArray[i] + "</p>");
+					}
+					</script>
+				</article>
+			</main>
+			
+			<!-- aside -->
+			<aside>
+				<a href="https://www.facebook.com/fantasycodersacademy" target="_blank"><figure><img src="images/logofacebook.png" onmouseover="mOF(this)" onmouseout="mAF(this)" alt="facebookLogo" title="Facebook"></figure></a>
+				<a href="https://twitter.com/dism1b22" target="_blank"><figure><img src="images/logotwitter.png" onmouseover="mOT(this)" onmouseout="mAT(this)" alt="twitterLogo" title="Twitter"></figure></a>
+				<a href="https://www.instagram.com/fantasycodersacademy/" target="_blank"><figure><img src="images/logoinstagram.png" onmouseover="mOI(this)" onmouseout="mAI(this)" alt="instagramLogo" title="Instagram"></figure></a>
+				<a href="https://www.youtube.com/channel/UCR1FBbj6zyIL67-wZVbbGGQ" target="_blank"><figure><img src="images/logoyoutube.png" onmouseover="mOY(this)" onmouseout="mAY(this)" alt="youtubeLogo" title="Youtube"></figure></a>
+				<a href="mailto:fantasycodersacademy@gmail.com" target="_blank"><figure><img src="images/logoemail.png" onmouseover="mOE(this)" onmouseout="mAE(this)" alt="emailLogo" title="Email"></figure></a>
+			</aside>
+			
+			<!-- back to top --> 
+			<a href="#" id="top" title="Back To Top">&#8593;</a>
+			
+			<!--footer-->
+			<footer>
+				<section> 
+					<h3>STAY CONNECTED</h3>
+					<p>Subscribe to Fantasy Coders Academy&#x27;s mailing list for exclusive offers&#x2c; monthly coding tips and news on the latest applications&#x21;</p>
+					<form name="subscriptionform" onsubmit="return(subscriptionfieldvalidation());" action="stayconnectedvalidation.html">
+						<fieldset>
+							<input type="email" placeholder="Email Address" name="Email Address" id="emailAddress">
+							<input type="submit" value="Sign Up"> 
+						</fieldset>
+					</form>
+					<script>
+					/* javascript - subscriptionfieldvalidation */ 
+					/* referenced from: HTML5 and CSS3 Complete Textbook */
+					function subscriptionfieldvalidation(){
+						if(document.subscriptionform.emailAddress.value == "") {
+							alert("Please provide your email address.");
+							document.subscriptionform.emailAddress.focus() ;
+							document.subscriptionform.emailAddress.style.backgroundColor = "#ffb3b3";
+							return false;
+						} else {
+							document.subscriptionform.emailAddress.style.backgroundColor = "#b3ff99";
+						}
+					}
+					</script>
+				</section>
+				<section> 
+					<h3>NAVIGATE</h3>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="learning.html">Learning</a></li>
+					</ul>
+					<ul>
+						<li><a href="facilities.html">Facilities</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="reservations.html">Reservations</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3>TALK TO US</h3>
+					<p><span class="pae">P</span>&#40;65&#41; 6888 0658
+					<br><span class="pae">A</span>Mapletree Business City II, &#x23;01&#45;045, Singapore 118502
+					<br><span class="pae">E</span>fantasycodersacademy&#64;gmail.com</p>
+				</section>
+			</footer>
+			
+		<!-- end of main container -->
+		</div>
+		<script src="scripts/scriptglobal.js"></script>		<!-- global script applies to all pages --> 
+	</body>
+</html>

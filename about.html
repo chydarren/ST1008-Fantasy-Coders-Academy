@@ -1,0 +1,175 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<title>Fantasy Coders Academy - About</title>
+		<!--
+			Fantasy Coders Academy Main Webpage
+			Filename: about.html
+			Author: chydarren
+			Date: 27 January 2017
+		--> 
+	    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="styles.css"> 
+		<link rel="shortcut icon" href="images/favicon.ico"> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.min.css">            <!-- jQuery user interface library --> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.theme.min.css">      <!-- jQuery user interface library --> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.structure.min.css">  <!-- jQuery user interface library --> 
+		<script src="scripts/modernizr.custom.40753.js"></script>                 <!-- modernizr feature detection library --> 
+		<script src="scripts/jquery-3.1.1.min.js"></script>                       <!-- jQuery library --> 
+		<script src="scripts/jquery-ui.min.js"></script>				          <!-- jQuery user interface library --> 
+		<script>
+		/* jquery - tooltip */ 
+		/* referenced from: http://jqueryui.com/tooltip/ */
+		$( function() {
+			$( document ).tooltip();
+		} );
+		</script>
+	</head>
+	<body>
+		<!-- main container --> 
+		<div class="mainContainer">
+		
+			<!-- headings -->
+			<header>
+				<figure><a href="index.html"><img src="images/logo.png" alt="fantasyCodersAcademy" title="Fantasy Coders Academy"></a></figure>
+			</header>
+			
+			<!-- navigation -->
+			<nav>
+				<div class="navigation-menu-button" onclick="myFunction(this)">
+					<div id="bar1"></div>
+					<div id="bar2"></div>
+					<div id="bar3"></div>
+				</div>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a class="active" href="about.html">ABOUT</a></li>
+					<li class="subNavigation"><a href="learning.html">LEARNING <span>&#x25BC;</span></a>
+						<ul class="subNavigationDropdown">
+							<li><a href="facilities.html">FACILITIES</a></li>
+						</ul>
+					</li>
+					<li class="subNavigation"><a href="contact.html">CONTACT <span>&#x25BC;</span></a>
+						<ul class="subNavigationDropdown" id="lastDropDown">
+							<li><a href="reservations.html">RESERVATIONS</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			
+			<!-- content (about) --> 
+			<main>
+				<h1>ABOUT</h1>
+				<h2>WHY CHOOSE US</h2>
+				<article id="biography">
+					<h3>Founder&#39;s Warm Welcome</h3>
+					<figure><img id="imgFounder" src="images/foundermini.jpg" alt="founder" title="Jason Warren"><figcaption>Jason Warren</figcaption></figure>
+					<p>Hello and welcome to Fantasy Coders Academy&#39;s website&#x21; I am glad you came here to find out more about coding at our academy. 
+					As of now, I am the only educator in Fantasy Coders Academy. I am an enthusiast in coding and because of my strong passion for developing applications 
+					and business solutions in information technology, I hope to be able to share my knowledge with you so that you can appreciate the art of coding and have fun. 
+					Coding may not be as difficult as seems, as I strongly believe that if you have the interest and patience, you will be able to code an application that can 
+					contribute to Singapore as a smart nation. That of course cannot be achieved alone, which is why we need to work together. Welcome onboard&#x21;<br><br>
+					Best Regards,<br>Jason Warren</p>
+					<h3>Favourite Coding Languages</h3>
+					<figure><img id="imgCodingFirst" class="imgCoding" src="images/codejava.png" alt="Java coding" title="Java Programming Language"></figure>
+					<figure><img class="imgCoding" src="images/codehtml.png" alt="HTML coding" title="HTML5 Markup Language"></figure>
+					<figure><img class="imgCoding" src="images/codecss.png" alt="CSS coding" title="CSS3 Stylesheet Language"></figure>
+					<figure><img class="imgCoding" src="images/codepy.png" alt="Python coding" title="Python Programming Language"></figure>
+					<figure><img class="imgCoding" src="images/codesql.png" alt="SQL coding" title="Structured Query Language"></figure>
+				</article>
+				<article id="roots">
+					<h3>Roots That Make Us Different</h3>
+					<button>Root 1 &#45; Critical Thinking</button>
+					<section>
+						<figure><img src="images/rootthinking.png" alt="critical thinking" title="Critical Thinking"></figure>
+						<h3>We trigger critical thinking skills in our coders.</h3>
+						<p>The fundamentals instilled by Fantasy Coders Academy over time leads to accelerated learning throughout the lives of our coders. While you pick up the fundamentals,
+						you will also be triggered to think critcally in solving problems that you may encounter while learning how to code. With critical thinking ingrained in you, you can
+						expect to gain opportunities in developing applications for the real world.</p>
+					</section>
+					<button>Root 2 &#45; Individual Pacing</button>
+					<section>
+						<figure><img src="images/rootpacing.png" alt="individual pacing" title="Individual Pacing"></figure>
+						<h3>We hone your knowledge at your own pace.</h3>
+						<p>We recognize that each individual progresses at different pace and some may need more time to process and reflect at each stage of learning. At Fantasy Coders Academy,
+						we accomodate to your learning pace by constantly asking you questions to trigger your personal reflection, as well as to enable you to share with us where are some of your 
+						weaknesses in which we can focus more on. By building the rapport between you and us, we can make your learning more enjoyable.</p>
+					</section>
+					<button>Root 3 &#45; Self Confidence</button>
+					<section>
+						<figure><img src="images/rootconfidence.png" alt="self confidence" title="Self Confidence"></figure>
+						<h3>We train your self confidence in solving challenges.</h3>
+						<p>Confidence is key in order to make better applications for the real world. Without confidence, one will not have the motivation nor trust in oneself that he&#47;she
+						has the ability to code an impressive and unique application, At Fantasy Coders Academy, we ensure that you will grow to be independent and confident coders by 
+						ensuring that you go through the various thinking processes before relying on us for help and guidance. Along the way, we will also reward you if you can solve
+						challenges on your own.<p>
+					</section>
+				</article>
+			</main>
+			
+			<!-- aside -->
+			<aside>
+				<a href="https://www.facebook.com/fantasycodersacademy" target="_blank"><figure><img src="images/logofacebook.png" onmouseover="mOF(this)" onmouseout="mAF(this)" alt="facebookLogo" title="Facebook"></figure></a>
+				<a href="https://twitter.com/dism1b22" target="_blank"><figure><img src="images/logotwitter.png" onmouseover="mOT(this)" onmouseout="mAT(this)" alt="twitterLogo" title="Twitter"></figure></a>
+				<a href="https://www.instagram.com/fantasycodersacademy/" target="_blank"><figure><img src="images/logoinstagram.png" onmouseover="mOI(this)" onmouseout="mAI(this)" alt="instagramLogo" title="Instagram"></figure></a>
+				<a href="https://www.youtube.com/channel/UCR1FBbj6zyIL67-wZVbbGGQ" target="_blank"><figure><img src="images/logoyoutube.png" onmouseover="mOY(this)" onmouseout="mAY(this)" alt="youtubeLogo" title="Youtube"></figure></a>
+				<a href="mailto:fantasycodersacademy@gmail.com" target="_blank"><figure><img src="images/logoemail.png" onmouseover="mOE(this)" onmouseout="mAE(this)" alt="emailLogo" title="Email"></figure></a>
+			</aside>
+			
+			<!-- back to top --> 
+			<a href="#" id="top" title="Back To Top">&#8593;</a>
+			
+			<!--footer-->
+			<footer>
+				<section> 
+					<h3>STAY CONNECTED</h3>
+					<p>Subscribe to Fantasy Coders Academy&#x27;s mailing list for exclusive offers&#x2c; monthly coding tips and news on the latest applications&#x21;</p>
+					<form name="subscriptionform" onsubmit="return(subscriptionfieldvalidation());" action="stayconnectedvalidation.html">
+						<fieldset>
+							<input type="email" placeholder="Email Address" name="Email Address" id="emailAddress">
+							<input type="submit" value="Sign Up"> 
+						</fieldset>
+					</form>
+					<script>
+					/* javascript - subscriptionfieldvalidation */ 
+					/* referenced from: HTML5 and CSS3 Complete Textbook */
+					function subscriptionfieldvalidation(){
+						if(document.subscriptionform.emailAddress.value == "") {
+							alert("Please provide your email address.");
+							document.subscriptionform.emailAddress.focus() ;
+							document.subscriptionform.emailAddress.style.backgroundColor = "#ffb3b3";
+							return false;
+						} else {
+							document.subscriptionform.emailAddress.style.backgroundColor = "#b3ff99";
+						}
+					}
+					</script>
+				</section>
+				<section> 
+					<h3>NAVIGATE</h3>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="learning.html">Learning</a></li>
+					</ul>
+					<ul>
+						<li><a href="facilities.html">Facilities</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="reservations.html">Reservations</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3>TALK TO US</h3>
+					<p><span class="pae">P</span>&#40;65&#41; 6888 0658
+					<br><span class="pae">A</span>Mapletree Business City II, &#x23;01&#45;045, Singapore 118502
+					<br><span class="pae">E</span>fantasycodersacademy&#64;gmail.com</p>
+				</section>
+			</footer>
+			
+		<!-- end of main container -->
+		</div>
+		<script src="scripts/scriptglobal.js"></script>				<!-- global script applies to all pages --> 
+		<script src="scripts/scriptaccordionroots.js"></script>     <!-- accordion for the roots --> 
+	</body>
+</html>

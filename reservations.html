@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<title>Fantasy Coders Academy - Reservations</title>
+		<!--
+			Fantasy Coders Academy Main Webpage
+			Filename: reservations.html
+			Author: chydarren
+			Date: 3 February 2017
+		--> 
+	    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="styles.css"> 
+		<link rel="shortcut icon" href="images/favicon.ico"> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.min.css">            <!-- jQuery user interface library --> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.theme.min.css">      <!-- jQuery user interface library --> 
+		<link rel="stylesheet" href="cssforplugins/jquery-ui.structure.min.css">  <!-- jQuery user interface library --> 
+		<script src="scripts/modernizr.custom.40753.js"></script>                 <!-- modernizr feature detection library --> 
+		<script src="scripts/jquery-3.1.1.min.js"></script>                       <!-- jQuery library --> 
+		<script src="scripts/jquery-ui.min.js"></script>				          <!-- jQuery user interface library --> 
+		<script>
+		/* jquery - tooltip */ 
+		/* referenced from: http://jqueryui.com/tooltip/ */
+		$( function() {
+			$( document ).tooltip();
+		} );
+		</script>
+	</head>
+	<body>
+		<!-- main container --> 
+		<div class="mainContainer">
+		
+			<!-- headings -->
+			<header>
+				<figure><a href="index.html"><img src="images/logo.png" alt="fantasyCodersAcademy" title="Fantasy Coders Academy"></a></figure>
+			</header>
+			
+			<!-- navigation -->
+			<nav>
+				<div class="navigation-menu-button" onclick="myFunction(this)">
+					<div id="bar1"></div>
+					<div id="bar2"></div>
+					<div id="bar3"></div>
+				</div>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li class="subNavigation"><a href="learning.html">LEARNING <span>&#x25BC;</span></a>
+						<ul class="subNavigationDropdown">
+							<li><a href="facilities.html">FACILITIES</a></li>
+						</ul>
+					</li>
+					<li class="subNavigation"><a href="contact.html">CONTACT <span>&#x25BC;</span></a>
+						<ul class="subNavigationDropdown" id="lastDropDown">
+							<li><a class="active" href="reservations.html">RESERVATIONS</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			
+			<!-- content (reservations) --> 
+			<main>
+				<h1>RESERVATIONS</h1>
+				<h2>LEARN WITH US</h2>
+				<article id="reservations">
+					<h3>Reservation System</h3>
+					<form id="order" name="order" onsubmit="return(reservationsfieldvalidation());" action="reservationsvalidation.html">
+						<fieldset id="contactperson">	
+							<legend>CONTACT PERSON</legend>
+							<p>We only require details of the main contact person for the reservation. 
+							<br>You may reserve a course for yourself and &#8725; or for other people. 
+							<br>Information such as preferred course dates can be arranged later.</p>
+							<label for="name">
+								Full Name &#42;
+								<input type="text" name="Full Name" id="name">
+							</label>
+							<label for="email">
+								Email Address &#42; 
+								<input type="email" name="Email Address" id="email" placeholder="address@example.com">
+							</label>
+							<label for="mobile">
+								Mobile Number &#42;
+								<input type="tel" name="Mobile Number" id="mobile" placeholder="xxxxxxxx">
+							</label>
+							<label for="address">
+								Home Address &#42;	
+								<input type="text" name="Home Address" id="address">
+							</label>
+						</fieldset>
+						<fieldset>
+							<legend>COURSE</legend>
+							<p>You are allowed to reserve one course from each category per submission.
+							<br>Select at least one course from either category.</p>
+							<label for="Beginner">Beginner &#40;S&#36;120.00&#41;</label>
+							<select id ="Beginner" name="Beginner">
+								<option value="">Make Selection</option>
+								<option value="120">P01 &#45; All About Python</option>
+								<option value="120">J01 &#45; All About Java</option>
+								<option value="120">W01 &#45; All About HTML5 and CSS3</option>
+								<option value="120">D01 &#45; All About Microsoft SQL</option>
+							</select>
+							<input type="text" name="Beginnerquantity" placeholder="Qty">
+							<label for="Intermediate">Intermediate &#40;S&#36;240.00&#41;</label>
+							<select id="Intermediate" name="Intermediate">
+								<option value="">Make Selection</option>
+								<option value="240">P02 &#45; Next Level Python</option>
+								<option value="240">J02 &#45; Android Applications Development</option>
+								<option value="240">W02 &#45; Web Applications Development</option>
+								<option value="240">D02 &#45; Database Security</option>
+							</select>
+							<input type="text" name="Intermediatequantity" placeholder="Qty">
+							<label for="Advanced">Advanced &#40;S&#36;360.00&#41;</label>
+							<select id="Advanced" name="Advanced">
+								<option value="">Make Selection</option>
+								<option value="360">P03 &#45; Advanced Python</option>
+								<option value="360">J03 &#45; Advanced Java</option>
+								<option value="360">W03 &#45; Advanced Web Development</option>
+								<option value="360">D03 &#45; Advanced Database Systems</option>
+							</select>
+							<input type="text" name="Advancedquantity" placeholder="Qty">
+							<div id="totalPrice"></div>
+						</fieldset>
+						<fieldset>
+							<legend>PAYMENT</legend>
+							<label for="visa">
+								<input type="radio" name="Payment Method" value="Visa" id="visa" checked>
+								Visa
+							</label>
+							<label for="mastercard">
+								<input type="radio" name="Payment Method" value="MasterCard" id="mastercard">
+								Mastercard
+							</label>
+							<label for="cash">
+								<input type="radio" name="Payment Method" value="Cash" id="cash">
+								Cash
+							</label>
+							<label for="creditcardno">
+								Card Number	&#42;
+								<input type="text" name="Credit Card Number" id="creditcardno" placeholder="xxxxxxxxxxxxxxxx">
+							</label>
+						</fieldset>
+						<fieldset>
+							<legend>REGISTRATION</legend>
+							<p id="notice">Important Notice</p>
+							<p>Please ensure that you have checked the details of the entire form before submitting your reservation.
+							<br>If you have any questions or require refunds after this, please inform us immediately.
+							<br>Otherwise, we will contact you within 3 days for arrangement.</p>
+							<input type="submit" value="Register"> 
+						</fieldset>
+					</form>
+				</article>
+			</main>
+			
+			<!-- content (social media)-->
+			<aside>
+				<a href="https://www.facebook.com/fantasycodersacademy" target="_blank"><figure><img src="images/logofacebook.png" onmouseover="mOF(this)" onmouseout="mAF(this)" alt="facebookLogo" title="Facebook"></figure></a>
+				<a href="https://twitter.com/dism1b22" target="_blank"><figure><img src="images/logotwitter.png" onmouseover="mOT(this)" onmouseout="mAT(this)" alt="twitterLogo" title="Twitter"></figure></a>
+				<a href="https://www.instagram.com/fantasycodersacademy/" target="_blank"><figure><img src="images/logoinstagram.png" onmouseover="mOI(this)" onmouseout="mAI(this)" alt="instagramLogo" title="Instagram"></figure></a>
+				<a href="https://www.youtube.com/channel/UCR1FBbj6zyIL67-wZVbbGGQ" target="_blank"><figure><img src="images/logoyoutube.png" onmouseover="mOY(this)" onmouseout="mAY(this)" alt="youtubeLogo" title="Youtube"></figure></a>
+				<a href="mailto:fantasycodersacademy@gmail.com" target="_blank"><figure><img src="images/logoemail.png" onmouseover="mOE(this)" onmouseout="mAE(this)" alt="emailLogo" title="Email"></figure></a>
+			</aside>
+			
+			<!-- back to top --> 
+			<a href="#" id="top" title="Back To Top">&#8593;</a>
+			
+			<!--footer-->
+			<footer>
+				<section> 
+					<h3>STAY CONNECTED</h3>
+					<p>Subscribe to Fantasy Coders Academy&#x27;s mailing list for exclusive offers&#x2c; monthly coding tips and news on the latest applications&#x21;</p>
+					<form name="subscriptionform" onsubmit="return(subscriptionfieldvalidation());" action="stayconnectedvalidation.html">
+						<fieldset>
+							<input type="email" placeholder="Email Address" name="Email Address" id="emailAddress">
+							<input type="submit" value="Sign Up"> 
+						</fieldset>
+					</form>
+					<script>
+					/* javascript - subscriptionfieldvalidation */ 
+					/* referenced from: HTML5 and CSS3 Complete Textbook */
+					function subscriptionfieldvalidation(){
+						if(document.subscriptionform.emailAddress.value == "") {
+							alert("Please provide your email address.");
+							document.subscriptionform.emailAddress.focus() ;
+							document.subscriptionform.emailAddress.style.backgroundColor = "#ffb3b3";
+							return false;
+						} else {
+							document.subscriptionform.emailAddress.style.backgroundColor = "#b3ff99";
+						}
+					}
+					</script>
+				</section>
+				<section> 
+					<h3>NAVIGATE</h3>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="learning.html">Learning</a></li>
+					</ul>
+					<ul>
+						<li><a href="facilities.html">Facilities</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="reservations.html">Reservations</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3>TALK TO US</h3>
+					<p><span class="pae">P</span>&#40;65&#41; 6888 0658
+					<br><span class="pae">A</span>Mapletree Business City II, &#x23;01&#45;045, Singapore 118502
+					<br><span class="pae">E</span>fantasycodersacademy&#64;gmail.com</p>
+				</section>
+			</footer>
+			
+		<!-- end of main container -->
+		</div>
+		<script src="scripts/scriptglobal.js"></script>							<!-- global script applies to all pages --> 
+		<script src="scripts/scriptshoppingcart.js"></script>                   <!-- shopping cart for reservation of courses --> 
+		<script src="scripts/scriptreservationsfieldvalidation.js"></script>    <!-- validate reservations form fields --> 
+	</body>
+</html>

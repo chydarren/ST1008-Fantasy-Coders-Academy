@@ -1,0 +1,862 @@
+/*
+	Fantasy Coders Academy Main Webpage
+	Filename: styles.css
+	Author: chydarren
+	Date: 16 January 2017
+*/ 
+
+/*custom fonts*/
+@font-face {
+    font-family: "PT_Sans_Narrow";
+    src: url("fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PT_Sans_Narrow";
+	font-weight: bold;
+    src: url("fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "Source_Sans_Pro"; 
+	src: url("fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf") format("truetype"); 
+}
+
+@font-face{
+	font-family: "Source_Sans_Pro"; 
+	font-weight: 100; 
+	src: url("fonts/Source_Sans_Pro/SourceSansPro-Light.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "Source_Sans_Pro"; 
+	font-weight: bold;
+	src: url("fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf") format("truetype");
+}
+
+/* reset styles */
+a, article, body, button, div, form, fieldset, figure, figcaption, footer, label, legend, header, h1, h2, h3, h4, input, iframe, img, li, nav, option, p, ul, section, select, span, ul{
+	border: 0;
+	margin: 0; 
+	padding: 0; 
+}
+
+img{
+	height: auto;
+	width: auto;
+}
+
+/* main container */
+.mainContainer{
+	background-color: #ffffff;
+	font-family: PT_Sans_Narrow, Verdana, Arial, sans-serif;
+	font-size: 17px;
+	max-width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/* headings */ 
+header{
+	background-color: #af936c; 
+	height: 60px;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+	-moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+	-webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);	
+}
+
+header img{
+	height: 55px;
+	z-index: -1;
+}
+
+/* navigation (main) */
+ul{list-style-type: none;}
+
+nav{
+	position: fixed; 
+	width: 100%; 
+	z-index: 2;
+}
+	
+nav ul{
+	background-color: #af936c; 
+	display: none;
+	padding-top: 10px;
+	margin-top: 60px;
+	width: 100%;
+	z-index: 2;
+}
+
+nav ul li{
+	display: block;
+	margin: 20px 0px;
+	width: 100%;
+}
+
+nav ul li a{
+	color: #000000;
+	display: block;
+	font-size: 18px;
+	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
+}
+
+nav ul li a span{display: none;}
+
+/* navigation (sub) */
+nav ul ul{
+	display: block;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+	
+nav ul #lastDropDown{padding-bottom: 10px;}
+
+/* navigation (responsive) */
+.navigation-menu-button{
+	top: 15px;
+	right: 25px;
+	position: fixed;
+}
+
+.navigation-menu-button div{
+	background-color: #000000;
+    width: 30px;
+    height: 3px;
+    margin: 6px 0px;
+}
+
+.navigation-menu-button:hover div{background-color: #ffffff;}
+
+.change #bar1{
+	-webkit-transform: rotate(-45deg) translate(-5px, 6px) ;
+    transform: rotate(-45deg) translate(-5px, 6px) ;
+}
+
+.change #bar2{opacity: 0;}
+
+.change #bar3{
+	-webkit-transform: rotate(45deg) translate(-7px, -8px) ;
+    transform: rotate(45deg) translate(-7px, -8px) ;
+}
+
+/* main settings (default fonts, hovers, actives, displays) */ 
+p, footer, input, #flip, #pricing section, #courses div h3, select, #totalPrice{ 
+	font-family: Source_Sans_Pro, Verdana, Arial, sans-serif;
+	font-weight: 100;
+}
+
+button, #pricing li:first-of-type, #courses div h3, .normal, label, legend, #contact section h3, #roots section h3{
+	font-family: Source_Sans_Pro, Verdana, Arial, sans-serif;
+	font-weight: normal;
+}
+
+.navigation-menu-button:hover, input[type=submit]:hover, button:hover, #myModal span, #commercial img, #flip, select{cursor: pointer;}
+
+h1{
+	color: #af936c;
+	font-size: 35px;
+	padding-top: 25px;
+}
+
+h2{
+	font-weight: normal;
+	padding-bottom: 25px;
+}
+
+h1, h2{
+	background-color: #eeefeb;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h3{font-size: 18px;}
+
+h3, p{margin-bottom: 20px;}
+
+nav ul li a.active{color: #ffffff;}
+
+nav ul li a:hover, nav ul li a.active{font-weight: bold;}
+
+main{
+	background-color: #e0e0e0;
+	overflow: auto;
+}
+
+main h1:nth-child(1){margin-top: 60px;}
+
+article{
+	background-color: #ffffff;
+	margin: 30px;
+	padding: 20px;
+	overflow: auto;
+}
+
+#biography > h3, #roots > h3, #pricing > h3, #courses > h3, #commercial > h3, #contact > h3, #reservations > h3, #stayconnectedvalidation > h3, #reservationsvalidation > h3 {font-size: 20px;}
+
+nav a:link, nav a:visited{
+	color: #000000;
+}
+
+footer a:link, footer a:visited{
+	color: #ffffff;
+}
+
+figcaption{
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+button, input, label, legend, #flip{font-size: 17px;}
+
+button:hover, button.active, #top:hover{
+	background-color: #af936c;
+	color: #ffffff;
+}
+
+#roots button, #courses button{
+	padding: 17px;
+	text-align: left;
+	width: 100%;
+}
+
+#roots button:after, #courses button:after{
+	content: '\002B';
+	float: right; 
+}
+
+#roots button.active:after, #courses button.active:after{
+	color: #ffffff;
+	content: "\002D";
+}
+
+#roots section, #courses div{
+	background-color: #ffffff;	
+	padding: 20px 0px;
+	width: 100%;
+}
+
+#roots section, #courses div div{
+	background-color: #f4f6f7;
+	display: none;
+}
+
+/* main settings (transitions) */ 
+input, button, aside img:hover, #top.show, #pricing section, #myModal span, #flip, .navigation-menu-button div{
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+/* forms (input and buttons) */ 
+label{margin-bottom: 20px;}
+
+input, select{
+	border: 2px solid #e0e0e0;
+	padding: 10px 12px;
+	-webkit-border-radius: 0px;
+}
+
+input[type=text], input[type=email], input[type=tel]{
+	-webkit-appearance: none;
+}
+
+input[type=submit]{
+	background-color: #ffffff;
+	-webkit-appearance: none;
+}
+
+input:focus, input:hover, #flip:hover{border-color: #af936c;}
+
+select{
+	font-size: 17px;
+	width: 100%;
+} 
+
+/* content (splashpage) */
+.splashpageImg{
+	display: block;
+	margin-top: 60px;
+	width: 100%;
+}
+
+/* content (about) */ 
+#biography figure:first-of-type{
+	box-shadow: 0px 2px 5px #afafaf;
+	margin: 0 auto 10px auto;
+	max-width: 250px;
+}
+
+#imgFounder{
+	margin: 0 auto;
+	width: 100%;
+}
+
+#imgCodingFirst{clear: both;}
+
+.imgCoding{
+	float: left;
+	margin: 5px;
+	width: 70px;
+}
+
+#roots section{
+	text-align: center;
+	margin: 0 auto;
+	padding: 20px 0px;
+}
+
+#roots section img{
+	margin-bottom: 20px;
+	max-width: 50%;
+}
+
+#roots section p, #roots section h3{padding: 0 20px;}
+
+/* content (learning) */
+#pricing section{
+	border: 1px solid #e0e0e0;
+	float: left;
+	margin-bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+#pricing section h3, #pricing li:first-of-type{font-size: 20px;}
+
+#pricing section h3{
+	background-color: #58d68d;
+	color: #ffffff;
+	font-weight: normal;
+	margin-bottom: 0px;
+	padding: 16px;
+}
+
+#pricing section:nth-of-type(2) h3{background-color: #5dade2;}
+
+#pricing section:nth-of-type(3) h3{background-color: #d98880;}
+
+#pricing section:hover{box-shadow: 0 8px 12px 0 #afafaf;}
+
+#pricing li{
+	border-bottom: 1px solid #e0e0e0;
+	padding: 14px;
+}
+
+#pricing li:first-of-type{background-color: #e0e0e0;}
+
+#courses div:nth-of-type(odd){clear: both;}
+
+#courses div div p, #courses div div h3{
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+#courses span:first-of-type{
+	background-color: #58d68d;
+	color: white;
+	font-size: 16px;
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 5%;
+	text-align: center;
+	padding: 6px;
+}
+
+#courses div:nth-child(7) span:first-of-type, #courses div:nth-child(8) span:first-of-type, #courses div:nth-child(9) span:first-of-type, #courses div:nth-child(10) span:first-of-type{background-color: #5dade2;} 
+
+#courses div:nth-child(11) span:first-of-type, #courses div:nth-child(12) span:first-of-type, #courses div:nth-child(13) span:first-of-type, #courses div:nth-child(14) span:first-of-type{background-color: #d98880;} 
+
+#courses span:nth-of-type(2){
+	clear: both;
+	display: block;
+	float: left;
+}
+
+#courses input{
+    box-sizing: border-box;
+	padding: 12px 16px;
+	width: 150px;
+}
+
+#courses input:focus {width: 100%;}
+
+/* content (facilities) */ 
+#commercial > div{
+	margin: 0;
+	padding: 0;
+}
+
+#commercial > div{
+	background-color: #e7f3fe;
+	border-left: 6px solid #2196F3;
+}
+
+#commercial img{
+	display: block;
+	width: 100%;
+}
+
+#commercial img:hover{opacity: 0.7;}
+
+#myModal{
+	background-color: #000000;
+	color: #ffffff;
+	display: none;
+	position: fixed;
+	left: 0;
+	height: 100%;
+	overflow: auto;
+	opacity: 1;
+	text-align: center;
+	top: 0; 
+	padding-top: 100px;
+	width: 100%;
+}
+
+#myModal div{
+	height: 0; 
+	padding-bottom: 50%;
+}
+
+#myModal iframe, #myModal object, #myModal embed{
+	display: block;
+	margin: auto;
+	opacity: 1;
+	max-width: 100%;
+}
+
+#myModal div{ 
+    -webkit-animation: 0.6s zoom;
+    animation: 0.6s zoom;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+#myModal span{
+	position: absolute;
+	top: 110px;
+	right: 35px;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+#myModal span:hover{color: #af936c;}
+
+/* content (contact) */ 
+#contact section:first-of-type{
+	float: left;
+	margin-right: 0;
+	width: 100%;
+}
+
+#contact iframe{
+	height: 400px;
+	margin-top: 5px;
+	width: 100%;
+}
+
+#contact section:nth-of-type(2){
+	float: left;
+	width: 100%;
+}
+
+#contact section:nth-of-type(2) h3:first-of-type{margin-top: 20px;}
+
+#flip{
+	background-color: #ffffff;
+	border: 2px solid #e0e0e0;
+	font-weight: normal;
+	margin-bottom: 20px;
+	text-align: center;
+	padding: 10px 12px;
+	width: 100px;
+}
+
+#panel{display: none;}
+
+.pae{
+	margin-right: 15px; 
+	font-weight: bold;
+}
+
+/* reservations */ 
+#reservations form{
+	background-color: #f4f6f7;
+	width: 100%;
+}
+
+#reservations legend{
+	background-color: #4d4d4d;
+	color: #ffffff;
+	text-align: center;
+	padding: 20px 0px;
+	width: 100%;
+}
+
+#reservations input{
+	display: block;
+	padding: 10px 16px;
+}
+
+#contactperson input, #reservations fieldset:nth-of-type(3) input[type=text], #reservations select, #reservations form input[type=submit]{width: 80%;}
+
+#contactperson input, #reservations fieldset:nth-of-type(3) input[type=text]{margin: 20px 0px;}
+
+#reservations form input[type=submit]{
+	margin: 20px auto;
+}
+
+#reservations form label{
+	display: block;
+}
+
+#reservations p, #reservations form label, #reservations fieldset:nth-of-type(2) input{margin: 20px;}
+
+#notice{
+	color: #c0392b;
+	font-weight: bold;
+}
+
+select, #reservations fieldset:nth-of-type(2)  div{
+	margin-left: 20px;
+}
+
+#reservations fieldset:nth-of-type(3){margin-top: 20px;}
+
+#reservations fieldset:nth-of-type(2) input{
+	text-align: center;
+	width: 20%;
+}
+
+#reservations fieldset:nth-of-type(3) input[type=radio]{display: initial;}
+
+/* aside */
+aside{
+	background-color: #afafaf;
+	clear: both;
+	padding: 10px 2px 10px 2px;
+	text-align: center;
+}
+
+aside figure{
+	display: inline-block;
+	height: 40px;
+	margin-left: 0.78%;
+	margin-right: 0.78%;
+}
+
+aside img{height: 40px;}
+
+/*  back to top */ 
+#top{
+	background-color: #707070;
+	bottom: 35px;
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 38px;
+	padding: 0px 14px 8px;
+    position: fixed;
+	right: 30px;
+	text-decoration: none;
+	opacity: 0;
+}
+
+#top.show{opacity: 0.8;  }
+
+/* footer */ 
+footer{
+	background-color: #3b3b3b;
+	color: #ffffff;
+	max-width: 100%;
+	overflow: auto;
+	padding: 20px;
+}
+
+footer p{width: 100%;}
+
+footer h3{
+	color: #af936c;
+	font-weight: bold;
+	font-family: PT_Sans_Narrow, Verdana, Arial, sans-serif; 
+}
+
+footer section{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+footer ul{
+	float: left; 
+	margin-right: 30px;
+}
+
+/* footer (stay connected) */
+footer section input[type=email]{width: 55%;}
+
+/* footer (navigate) */ 
+footer section:nth-child(2){display: none;}
+
+footer section li{margin-bottom: 10px;}
+
+footer section li a{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+footer section li a:hover{color: #af936c;}
+
+/* css add-ons for javascript or jquery */ 
+#roots section.show{display: block;}
+
+/* medium screen styles */ 
+@media screen and (min-width: 480px){
+	
+	/* content (about) */
+	#roots section{
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	#roots section img{max-width: 250px;}
+	
+	#roots section p{padding: 0 15%;}
+	
+	/* content (learning) */ 
+	#pricing section{
+		margin-bottom: 0px;
+		margin-right: 5%;
+		width: 26%;
+	}
+	
+	#courses input:focus {width: 95%;}
+	
+	#courses div{
+		float: left;
+		margin-right: 5%;
+		width: 45%;
+	}
+	
+	#courses div div{
+		background-color: #f4f6f7;
+		margin-right: 0px;
+		width: 100%;
+		
+	}
+	
+	/* content (reservations) */ 
+	#reservations form input[type=submit]{width: 20%;}
+	
+	#reservations fieldset:nth-of-type(2) input{
+		text-align: center;
+		width: 10%;
+	}
+
+	/* footer*/
+	/* footer (navigate) */ 
+	footer section:nth-child(2){display: block;}
+}
+
+/* standard screen styles */ 
+@media screen and (min-width: 880px){
+	
+	/* main content */
+	main h1:nth-child(1){margin-top: 0px;}
+
+	/* content (about) */ 
+	#biography h3, #biography p{
+		float: left;
+		width: 70%;
+	}
+	
+	#biography figure:first-of-type{
+		float: right;
+		width: 20%;
+	}
+
+	/* headings */
+	header{
+		height: 100px;
+		position: static;
+	}
+	
+	header img{height: 90px;}
+	
+	/* navigation (main) */
+	nav{position: static;}
+	
+	nav ul{
+		background-color: #af936c;
+		display: block;
+		height: 40px;
+		padding: 10px 0px;
+		position: static;
+		margin-top: 0px;
+		width: 100%;
+	}
+	
+	nav ul li{
+		float: left;
+		margin: 0px;
+		text-align: left;
+		padding-bottom: 10px;
+		width: auto;
+	}
+	
+	nav ul li a:first-child{margin-left: 20px;}
+	
+	nav ul li a{
+		border-bottom: 4px solid #af936c;
+		color: #000000;
+		display: inline-block;
+		font-weight: bold;
+		margin-right: 50px;
+		padding-bottom: 5px;
+	}
+	
+	nav ul li a span{
+		display: initial;
+		font-size: 12px;
+	}
+	
+	nav ul li a:hover{border-bottom: 4px solid #000000;}
+
+	nav ul li a.active{
+		border-bottom: 4px solid #ffffff;
+		opacity: 1;
+	}
+	
+	/* navigation (sub) */
+	nav ul li:first-child{margin-left: 0px;}
+	
+	.subNavigation:hover .subNavigationDropdown{display: block;}
+	
+	nav ul ul{ 
+		background-color: #afafaf;
+		border-top: 2px solid #000000;
+		display: none;
+		position: absolute;
+		margin-top: 10px;
+		margin-left: 20px;
+		padding-top: 0px;
+		width: 135px;
+	}
+	
+	nav ul ul a{
+		border-bottom: solid 4px #afafaf;
+		color: #000000;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+	
+	/* navigation (responsive) */
+	.navigation-menu-button{display: none;}
+	
+	/* content (splashpage) */
+	.splashpageImg{margin-top: 0px;}
+	
+	/* content (learning) */ 
+	#courses span:first-of-type{float: none;}
+
+	#courses span:nth-of-type(2){
+		clear: none;
+		display: inline;
+		float: none;
+	}
+	
+	/* content (contact) */
+	#contact section:first-of-type{
+		float: left;
+		margin-right: 5%;
+		width: 60%;
+	}
+	
+	#contact section:nth-of-type(2){
+		float: left;
+		width: 35%;
+	}
+
+	#contact section:nth-of-type(2) h3:first-of-type{margin-top: 0px;}
+	
+	/* aside */
+	aside figure, aside img{height: 50px;}
+	
+	aside img:hover{
+		transform: translateY(-20px);
+		-ms-transform: translateY(-20px); 
+		-webkit-transform: translateY(-20px); 
+	}
+	
+	/* footer */ 
+	/* footer (stay connected) */
+	footer section:nth-child(1){width: 30%;}
+	
+	/* footer (navigate) */
+	footer section:nth-child(2){width: 25%;}
+	
+	/* footer (talk to us) */ 
+	footer section:nth-child(3){width: 34%;}
+	
+	/* css add-ons for javascript or jquery */
+		/* navigation (main) */
+		.fixedmainnav{
+			-webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+			-moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
+			box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+			position: fixed;
+			top: 0px;
+		}
+		
+		/* navigation (sub) */
+		.fixedsubnav{margin-top: 53px;}
+
+}
+
+/* large screen styles */
+@media screen and (min-width: 1280px) {
+	
+	/* footer */ 
+	/* footer (stay connected) */
+	footer section:nth-child(1){width: 35%;}
+	
+	/* footer (navigate) */
+	footer section:nth-child(2){width: 20%;}
+	
+	/* footer (talk to us) */ 
+	footer section:nth-child(3){width: 35%;}
+	
+}
+
+/* maximum width screen styles */ 
+@media screen and (min-width: 1400px) {
+	.mainContainer{width: 1280px;}
+	
+	nav ul{width: 1280px;}
+}
+
+/* print styles */
+@media print {
+	.mainContainer{color: #000000;}
+	
+	aside{display: none;}
+}
+
+
+
