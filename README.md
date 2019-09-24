@@ -14,7 +14,7 @@ original and no external templates have been used.
 
 1. Clone this repository into any directory.
 
-2. Enter the "fantasy-coders-academy" directory by typing 'cd fantasy-coders-academy'. 
+2. Enter the "fantasy-coders-academy" directory by typing `cd fantasy-coders-academy`. 
 
 3. The website is ready.
 
