@@ -1,7 +1,7 @@
 # Fantasy Coders Academy
 
 ***Fantasy Coders Academy*** is an interactive website that provides information about the Fantasy Coders Academy. It implements a responsive design and 
-incorporate at least one interactive feature with javascript coding and one jQuery plug-in. The content and design elements of the website are 
+incorporate interactive features with javascript and one jQuery plug-in. The content and design elements of the website are 
 original and no external templates have been used.
 
 ## Preview
