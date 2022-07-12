@@ -18,7 +18,7 @@ original and no external templates have been used.
 
 ## Acknowledgements 
 
-- **Chua Han Yong Darren** | [@chydarren](https://github.com/chydarren)
+- **Darren Chua** | [@chydarren](https://github.com/chydarren)
 
 ## Credits 
 
